@@ -19,3 +19,7 @@ def error_401(request):
 def error_404(request):
     context = {"message": "Usuario creado correctamente"}
     return render(request, '404.html', context)
+
+def base(request):
+    context = {"message": "Usuario creado correctamente"}
+    return render(request, 'base.html', context)

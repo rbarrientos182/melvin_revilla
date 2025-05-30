@@ -1,6 +1,6 @@
 from django.contrib.auth.views import LoginView, LogoutView
 from django.urls import path
-from .views import RegisterView, error_500, error_401, error_404
+from .views import RegisterView, error_500, error_401, error_404, base
 
 urlpatterns = [
     path("login/", LoginView.as_view(template_name="users/login.html"), name="login"),
@@ -9,5 +9,6 @@ urlpatterns = [
     path("error_500/", error_500, name="error_500"),
     path("error_401/", error_401, name="error_401"),
     path("error_404/", error_404, name="error_404"),
+    path("base/", base, name="base"),
 
 ]
